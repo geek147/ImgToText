@@ -19,7 +19,7 @@ Here is the video for your reference:
 
 https://user-images.githubusercontent.com/1259432/216801613-0f114dae-4c2a-4250-a602-75b9bf98eb64.mp4
 
-and here is capture fromm Firebase Realtikme Database
+and here is capture from Firebase Realtime Database
 
 
 
