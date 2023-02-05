@@ -22,7 +22,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
-import com.codeonwheels.myapplication.ExifUtil
+import com.codeonwheels.myapplication.BuildConfig
 import com.codeonwheels.myapplication.ExifUtil.rotateBitmap
 import com.codeonwheels.myapplication.R
 import com.codeonwheels.myapplication.databinding.FragmentMainBinding
@@ -59,7 +59,6 @@ class MainFragment : Fragment(), LocationListener {
     private val latitudePI: Double =  -6.19308955
     private val longitudePI: Double = 106.821874260851
 
-    private val API_KEY : String = "AIzaSyBWC45IjsUyCGLzfQiKHvnUrsH3vZm4uxc"
     private lateinit var database : DatabaseReference
 
     var listData : List<String> = listOf()
@@ -128,7 +127,7 @@ class MainFragment : Fragment(), LocationListener {
         val listDistanceEstimated = mutableListOf<String>()
         try {
             val context = GeoApiContext.Builder()
-                .apiKey(API_KEY)
+                .apiKey(BuildConfig.API_KEY)
                 .build()
 
             val req = DistanceMatrixApi.newRequest(context)
